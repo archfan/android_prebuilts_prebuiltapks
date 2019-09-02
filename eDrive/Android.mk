@@ -8,9 +8,9 @@ LOCAL_PRIVILEGED_MODULE := true
 
 
 ifeq ($(PLATFORM_SDK_VERSION), 25)
-  LOCAL_SRC_FILES := foundation.e.drive.alpha-1-build-n-19-07-19T1145-release-unsigned.apk
+  LOCAL_SRC_FILES := foundation.e.drive.alpha-1-build-n-19-08-30T0826-release-unsigned.apk
 else
-  LOCAL_SRC_FILES := foundation.e.drive.alpha-1-build-o-19-07-19T1143-release-unsigned.apk
+  LOCAL_SRC_FILES := foundation.e.drive.alpha-1-build-o-19-08-30T0916-release-unsigned.apk
 endif
 
 LOCAL_MODULE_CLASS := APPS
