@@ -6,8 +6,10 @@ LOCAL_CERTIFICATE := platform
 
 ifeq ($(PLATFORM_SDK_VERSION), 25)
   LOCAL_SRC_FILES := OpenWeatherMapWeatherProvider-nougat.apk
-else
+else ifeq ($(PLATFORM_SDK_VERSION), 26)
   LOCAL_SRC_FILES := OpenWeatherMapWeatherProvider-oreo.apk
+else ifeq ($(PLATFORM_SDK_VERSION), 29)
+  LOCAL_SRC_FILES := OpenWeatherMapWeatherProvider-pie.apk
 endif
 
 LOCAL_MODULE_CLASS := APPS
