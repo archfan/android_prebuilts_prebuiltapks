@@ -4,7 +4,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := MuPDF
 LOCAL_CERTIFICATE := PRESIGNED
 
-LOCAL_SRC_FILES := mupdf-android-viewer-mini-1.13.0-universal.apk
+LOCAL_SRC_FILES := com.artifex.mupdf.mini.app_50.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
