@@ -22,3 +22,22 @@ The included APKs are:
  * LineageOS packages (binaries sourced from [here](https://download.lineageos.org/extras))
    * OpenWeatherMapWeatherProvider: "Open Weather Map" weather provider for the LineageOS' weather service
 
+Use this Docker script to build /e/
+```bash
+sudo docker run \
+-v "/srv/e/src:/srv/src:delegated" \
+-v "/srv/e/zips:/srv/zips:delegated" \
+-v "/srv/e/logs:/srv/logs:delegated" \
+-v "/srv/e/ccache:/srv/ccache:delegated" \
+-v "/srv/e/keys:/srv/keys:delegated" \
+-v "/srv/e/local_manifests:/srv/local_manifests:delegated" \
+-e "BRANCH_NAME=v1-pie" \
+-e "SIGN_BUILDS=true" \
+-e "INCLUDE_PROPRIETARY=false" \
+-e "DEVICE_LIST=grus" \
+-e "CUSTOM_PACKAGES='MuPDF GmsCore GsfProxy FakeStore com.google.android.maps.jar Mail BlissLauncher BlissIconPack AppleNlpBackend OpenWeatherMapWeatherProvider OsmAnd Weather Notes Tasks NominatimNlpBackend DroidGuard OpenKeychain Message Browser BrowserWebView Apps LibreOfficeViewer'" \
+-e "SIGNATURE_SPOOFING=restricted" \
+-e "OTA_URL=https://ota.asdf.eu/api" \
+-e "REPO=https://gitlab.e.foundation/e/os/android.git" \
+registry.gitlab.e.foundation:5000/e/os/docker-lineage-cicd:latest
+```
